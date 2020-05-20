@@ -1,9 +1,12 @@
 .slider {
   position: relative;
   height: 600px;
+  width: 100%;
 
   &__item {
     position: relative;
+    width: 100%;
+    display: block;
 
     .img_1 {
       position: absolute;
@@ -49,12 +52,11 @@
   @media (max-width: 767px) {
 
     &__content {
-      width: 100%;
-      z-index: 1;
+      display: none;
     }
 
     &__nav {
-      // display: none;
+      display: none;
     }
   }
 }

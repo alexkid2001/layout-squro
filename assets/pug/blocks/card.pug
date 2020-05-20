@@ -1,0 +1,6 @@
+mixin card(obj)
+  .card
+    .card__icon
+      +icon(obj.icon)
+    .card__title!= obj.title
+    .card__content!= obj.text

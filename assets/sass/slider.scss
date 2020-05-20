@@ -1,0 +1,60 @@
+.slider {
+  position: relative;
+  height: 600px;
+
+  &__item {
+    position: relative;
+
+    .img_1 {
+      position: absolute;
+      top: -25px;
+      right: -241px;  
+    }
+  }
+
+  &__content {
+    font-size: 60px;
+    color: white;
+    text-align: left;
+    padding-top: 117px;
+    width: 65%;
+
+    .button {
+      margin-top: 36px;
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    display: flex;
+  }
+
+  &__dot{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: white;
+
+    &:nth-child(n+2) {
+      margin-left: 18px;
+    }
+
+    &.active {
+      background-color: $accent-color;
+    }
+  }
+
+  @media (max-width: 767px) {
+
+    &__content {
+      width: 100%;
+      z-index: 1;
+    }
+
+    &__nav {
+      // display: none;
+    }
+  }
+}

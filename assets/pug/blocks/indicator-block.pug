@@ -1,0 +1,8 @@
+include card
+
+mixin indicatorBlock(num, title, cardObj)
+  .indicator-block
+    .indicator-block__wrap
+      .indicator-block__num= num
+      .indicator-block__title!= title
+      +card(cardObj)

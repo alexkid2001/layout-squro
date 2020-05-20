@@ -1,0 +1,47 @@
+mixin menu(isMobile)
+  ul.menu(class!=attributes.class)
+    if isMobile
+      li.menu__item
+        .menu__item-title
+          a(href="#") Log in
+    li.menu__item.menu__item_sub.active
+      .menu__item-title
+        a(href="#") Home
+      .submenu(class!=attributes.class)
+        .submenu__item
+          .menu-title Submenu 01
+          ul.menu
+            li.menu__item
+              .menu__item-title
+                a(href="#") Excepteur sint
+            li.menu__item
+              .menu__item-title
+                a(href="#") Occaecat cupidatat
+        .submenu__item
+          .menu-title Submenu 02
+          ul.menu
+            li.menu__item
+              .menu__item-title
+                a(href="#") Adipisci velit
+            li.menu__item
+              .menu__item-title
+                a(href="#") Magnam aliquam
+            li.menu__item
+              .menu__item-title
+                a(href="#") Error sit voluptatem
+        
+    li.menu__item
+      .menu__item-title
+        a(href="#") About us        
+    li.menu__item
+      .menu__item-title
+        a(href="#")  Our News        
+    li.menu__item
+      .menu__item-title
+        a(href="#")  Blog        
+    li.menu__item
+      .menu__item-title
+        a(href="#")  Contacts
+    li.menu__item
+      .menu__item-title
+        a(href="#")  Faq

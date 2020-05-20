@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Gilroy Regular';
+  src: local('Gilroy-Regular'), local('Gilroy-Regular'),
+      url('../fonts/Gilroy-Regular.woff2') format('woff2'),
+      url('../fonts/Gilroy-Regular.woff') format('woff'),
+      url('../fonts/Gilroy-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy Black';
+  src: local('Gilroy-Black'), local('Gilroy-Black'),
+      url('../fonts/Gilroy-Black.woff2') format('woff2'),
+      url('../fonts/Gilroy-Black.woff') format('woff'),
+      url('../fonts/Gilroy-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}

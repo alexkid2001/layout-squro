@@ -1,0 +1,35 @@
+.indicator-block {
+  padding-top: 22px;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: $gold-color;
+  }
+
+  &__num {
+    font-size: 35px;
+    color: $gold-color;
+  }
+
+  &__title {
+    font-family: 'Gilroy Black', sans-serif;
+    font-size: 22px;
+    color: white;
+    line-height: 1.2;
+
+    .icon {
+      font-size: 20px;
+    }
+  }
+
+  .card {
+    margin-top: 25px;
+  }
+  
+}

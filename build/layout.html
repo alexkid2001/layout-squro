@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>SQURO</title>
+    <link rel="stylesheet" href="styles/common.css"/>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header__logo">
+        <svg class="icon icon-logo ">
+          <use xlink:href="i/sprite/sprite.svg#logo"></use>
+        </svg>
+      </div>
+      <div class="container">
+        <div class="header__menu">
+          <ul class="menu">
+            <li class="menu__item menu__item_sub active">
+              <div class="menu__item-title"><a href="#">Home</a></div>
+              <div class="submenu">
+                <div class="submenu__item">
+                  <div class="menu-title">Submenu 01</div>
+                  <ul class="menu">
+                    <li class="menu__item">
+                      <div class="menu__item-title"><a href="#">Excepteur sint</a></div>
+                    </li>
+                    <li class="menu__item">
+                      <div class="menu__item-title"><a href="#">Occaecat cupidatat</a></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="submenu__item">
+                  <div class="menu-title">Submenu 02</div>
+                  <ul class="menu">
+                    <li class="menu__item">
+                      <div class="menu__item-title"><a href="#">Adipisci velit</a></div>
+                    </li>
+                    <li class="menu__item">
+                      <div class="menu__item-title"><a href="#">Magnam aliquam</a></div>
+                    </li>
+                    <li class="menu__item">
+                      <div class="menu__item-title"><a href="#">Error sit voluptatem</a></div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="menu__item">
+              <div class="menu__item-title"><a href="#">About us        </a></div>
+            </li>
+            <li class="menu__item">
+              <div class="menu__item-title"><a href="#"> Our News        </a></div>
+            </li>
+            <li class="menu__item">
+              <div class="menu__item-title"><a href="#"> Blog        </a></div>
+            </li>
+            <li class="menu__item">
+              <div class="menu__item-title"><a href="#"> Contacts</a></div>
+            </li>
+            <li class="menu__item">
+              <div class="menu__item-title"><a href="#"> Faq</a></div>
+            </li>
+          </ul>
+        </div>
+        <div class="header__action">
+          <button class="button button_float">Sign in</button>
+          <button class="button button_inverce">Registration</button>
+        </div>
+      </div>
+      <div class="header__lang">
+        <div class="lang">
+          <div class="lang__flag">
+            <svg class="icon icon-flag-dumy ">
+              <use xlink:href="i/sprite/sprite.svg#flag-dumy"></use>
+            </svg>
+          </div>
+          <div class="lang__name">English</div>
+          <div class="lang__arrow">
+            <svg class="icon icon-arrow-down ">
+              <use xlink:href="i/sprite/sprite.svg#arrow-down"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="header__menu-icon">
+        <svg class="icon icon-menu ">
+          <use xlink:href="i/sprite/sprite.svg#menu"></use>
+        </svg>
+      </div>
+      <div class="header__mobile-menu">
+        <div class="lang lang_mobile">
+          <div class="lang__flag">
+            <svg class="icon icon-flag-dumy ">
+              <use xlink:href="i/sprite/sprite.svg#flag-dumy"></use>
+            </svg>
+          </div>
+          <div class="lang__name">English</div>
+          <div class="lang__arrow">
+            <svg class="icon icon-arrow-down ">
+              <use xlink:href="i/sprite/sprite.svg#arrow-down"></use>
+            </svg>
+          </div>
+        </div>
+        <ul class="menu menu_mobile">
+          <li class="menu__item">
+            <div class="menu__item-title"><a href="#">Log in</a></div>
+          </li>
+          <li class="menu__item menu__item_sub active">
+            <div class="menu__item-title"><a href="#">Home</a></div>
+            <div class="submenu menu_mobile">
+              <div class="submenu__item">
+                <div class="menu-title">Submenu 01</div>
+                <ul class="menu">
+                  <li class="menu__item">
+                    <div class="menu__item-title"><a href="#">Excepteur sint</a></div>
+                  </li>
+                  <li class="menu__item">
+                    <div class="menu__item-title"><a href="#">Occaecat cupidatat</a></div>
+                  </li>
+                </ul>
+              </div>
+              <div class="submenu__item">
+                <div class="menu-title">Submenu 02</div>
+                <ul class="menu">
+                  <li class="menu__item">
+                    <div class="menu__item-title"><a href="#">Adipisci velit</a></div>
+                  </li>
+                  <li class="menu__item">
+                    <div class="menu__item-title"><a href="#">Magnam aliquam</a></div>
+                  </li>
+                  <li class="menu__item">
+                    <div class="menu__item-title"><a href="#">Error sit voluptatem</a></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="menu__item">
+            <div class="menu__item-title"><a href="#">About us        </a></div>
+          </li>
+          <li class="menu__item">
+            <div class="menu__item-title"><a href="#"> Our News        </a></div>
+          </li>
+          <li class="menu__item">
+            <div class="menu__item-title"><a href="#"> Blog        </a></div>
+          </li>
+          <li class="menu__item">
+            <div class="menu__item-title"><a href="#"> Contacts</a></div>
+          </li>
+          <li class="menu__item">
+            <div class="menu__item-title"><a href="#"> Faq</a></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script>{
+  const menuItems = document.querySelectorAll('.menu__item_sub');
+  menuItems.forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.add('open');
+    });
+  });
+
+  const submenuItems = document.querySelectorAll('.menu__item_sub .menu__item');
+  
+  submenuItems.forEach(item => {
+    item.addEventListener('click', () => {
+      item.closest('.menu__item_sub').classList.remove('open');
+      event.stopPropagation();
+    });
+  });
+
+  const menuIcon = document.querySelector('.header__menu-icon');
+  const mobileMenu = document.querySelector('.header__mobile-menu');
+  const body = document.querySelector('body');
+  menuIcon.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+
+    if (mobileMenu.classList.contains('active')) {
+      body.classList.add('overflow');
+    } else {
+      body.classList.remove('overflow');
+    }
+
+  });
+
+}
+    </script>
+  </body>
+</html>

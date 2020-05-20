@@ -1,0 +1,33 @@
+include indicator-block
+
+mixin aboutBlock
+  .about-block
+    .container
+      .about-block__title 
+        p Excepteur sint occaecat Cupidatat
+        p Non proident, sunt in culpa qui Officia.
+      .about-block__indicators
+        +indicatorBlock('75000+', 'First Parameter <br/> Value', 
+          {
+            icon: 'trand', 
+            title: 'Lorem Ipsum Dolor', 
+            text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut'
+          })
+        +indicatorBlock('0%', 'Second Parameter <br/> Value',
+          {
+            icon: 'phone',
+            title: 'Consectetur Adipisicing Elit', 
+            text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut'
+          })
+        +indicatorBlock('$5000', 'Third Parameter <br/> Value',
+          {
+            icon: 'chess', 
+            title: 'Tempor Incididunt Ut', 
+            text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut'
+          })
+        +indicatorBlock('90+', 'Fourth Parameter <br/> Value',
+          {
+            icon: 'clock', 
+            title: 'Sed Do Eiusmod', 
+            text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut'
+          })

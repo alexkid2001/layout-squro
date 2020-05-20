@@ -1,0 +1,23 @@
+include menu
+include lang
+
+mixin header()
+  .header
+    .header__logo
+      +icon('logo')
+      //- img(src="i/logo.svg", alt="Logo")
+    .container
+      .header__menu
+        +menu
+      .header__action
+        button.button.button_float Sign in
+        button.button.button_inverce Registration
+    .header__lang
+      +lang
+    .header__menu-icon
+      +icon('menu')
+    .header__mobile-menu
+      +lang.lang_mobile
+      +menu(true).menu_mobile
+
+

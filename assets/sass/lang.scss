@@ -1,0 +1,55 @@
+.lang {
+  color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    opacity: .9;
+  }
+
+  &__flag {
+    margin-right: 8px;
+    padding-top: 4px;
+    
+    .icon {
+      font-size: 19px;
+    }
+  }
+
+  &__name {
+    display: inline-block;
+  }
+
+  &__arrow {
+    margin-left: 9px;
+
+    .icon {
+      font-size: 9px;
+    }
+  }
+
+  &_mobile {
+    background-color: white;
+    border-radius: 1px;
+    height: 40px;
+    padding: 5px 10px 5px 15px;
+    box-sizing: border-box;
+
+    .lang {
+      
+      &__name {
+        color: $dark;
+      }
+
+      &__arrow {
+        margin-left: auto;
+
+        .icon {
+          color: $dark;
+          font-size: 7px;
+        }
+      }
+    }
+  }
+}

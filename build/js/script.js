@@ -44,13 +44,6 @@
     const isMenuItem = target.classList.contains('menu__item') || target.closest('.menu__item');
     const isSubmenuItem = target.classList.contains('menu__item_sub') || target.parentNode.parentNode.classList.contains('menu__item_sub');
     const menu = target.closest('.menu');
-    // const its_btnMenu = target == menuItems;
-    // const menu_is_active = menu.classList.contains('open');
-    console.log('target', target);
-    console.log('isMobileMenu', isMobileMenu);
-    console.log('isMenuItem', isMenuItem);
-    console.log('isSubmenuItem', target.parentNode.parentNode.classList.contains('menu__item_sub'));
-    console.log('menu', menu);
     
     if (isMobileMenu && isMenuItem && !isSubmenuItem) {
       mobileMenu.classList.remove('active');

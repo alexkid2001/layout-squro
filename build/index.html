@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <title>SQURO</title>
     <link rel="stylesheet" href="styles/common.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/simpleslider-js@1.9.0/dist/simpleSlider.min.css"/>
+    <script src="https://unpkg.com/simpleslider-js@1.9.0/dist/simpleSlider.min.js"></script>
   </head>
   <body>
     <div class="header">
@@ -154,24 +156,52 @@
         </ul>
       </div>
     </div>
-    <div class="top-block">
+    <div class="top-block"><img class="top-block__image" src="i/top.png" alt="Top 1"/>
       <div class="container">
         <div class="slider">
-          <div class="slider__item">
-            <div class="slider__content">
-              Sed ut perspiciatis
-              unde omnis iste natus
-              error 5000
-              <button class="button button_slider">Learn Now!</button>
-            </div><img class="img_1" src="i/top.png" alt="Top 1"/>
+          <div class="slider__wrapper">
+            <div class="slider__item">
+              <div class="slider__content">
+                Sed ut perspiciatis
+                unde omnis iste natus
+                error 5000
+                <button class="button button_slider">Learn Now!</button>
+              </div>
+            </div>
+            <div class="slider__item">
+              <div class="slider__content">
+                Sed ut perspiciatis
+                unde omnis iste natus
+                error 5000
+                <button class="button button_slider">Learn Now!</button>
+              </div>
+            </div>
+            <div class="slider__item">
+              <div class="slider__content">
+                Sed ut perspiciatis
+                unde omnis iste natus
+                error 5000
+                <button class="button button_slider">Learn Now!</button>
+              </div>
+            </div>
+            <div class="slider__item">
+              <div class="slider__content">
+                Sed ut perspiciatis
+                unde omnis iste natus
+                error 5000
+                <button class="button button_slider">Learn Now!</button>
+              </div>
+            </div>
+            <div class="slider__item">
+              <div class="slider__content">
+                Sed ut perspiciatis
+                unde omnis iste natus
+                error 5000
+                <button class="button button_slider">Learn Now!</button>
+              </div>
+            </div>
           </div>
-          <div class="slider__nav">
-            <div class="slider__dot"></div>
-            <div class="slider__dot"></div>
-            <div class="slider__dot"></div>
-            <div class="slider__dot"></div>
-            <div class="slider__dot active"></div>
-          </div>
+          <div class="slider__nav"></div>
         </div>
       </div>
     </div>
@@ -257,13 +287,44 @@
       </div>
     </div>
     <script>{
+    
+  new SimpleSlider('.slider', {
+    autoplay: true,
+    speed: 300,
+    delay: 7000,
+    class: {
+      wrapper: 'slider__wrapper',
+      slide: 'slider__item',
+      pagination: 'slider__nav',
+      paginationItem: 'slider__dot'
+    }
+  });
+
+
   const menuIcon = document.querySelector('.header__menu-icon');
   const mobileMenu = document.querySelector('.header__mobile-menu');
   const body = document.querySelector('body');
-  
-  
-  const menuItems = document.querySelectorAll('.menu__item_sub');
+   
+  const menuSubItems = document.querySelectorAll('.menu__item_sub');
+  const menuItems = document.querySelectorAll('.menu > .menu__item');
+
+  const disactiveAll = () => {
+    menuItems.forEach(item => {
+      item.classList.remove('active');
+    });
+    menuSubItems.forEach(item => {
+      item.classList.remove('open');
+    });
+  };
+
   menuItems.forEach(item => {
+    item.addEventListener('click', () => {
+      disactiveAll();
+      item.classList.add('active');
+    })
+  });
+
+  menuSubItems.forEach(item => {
     item.addEventListener('click', () => {
       event.stopPropagation();
       item.classList.toggle('open');
@@ -295,6 +356,11 @@
     }
   });
 
+  const closeMobileMenu = () => {
+    mobileMenu.classList.remove('active');
+    body.classList.remove('overflow');
+  }
+
 
   document.addEventListener('click', () => {
     const target = event.target;
@@ -304,20 +370,22 @@
     const menu = target.closest('.menu');
     
     if (isMobileMenu && isMenuItem && !isSubmenuItem) {
-      mobileMenu.classList.remove('active');
+      closeMobileMenu();
     }
 
     if (!menu) {
-      menuItems.forEach(item => {
+      menuSubItems.forEach(item => {
         item.classList.remove('open');
       })
-      mobileMenu.classList.remove('active');
+      closeMobileMenu();
     }
-    console.log('Global Event');
     
   });
 
 }
+
+
+
     </script>
   </body>
 </html>

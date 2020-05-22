@@ -4,6 +4,7 @@ body {
   font-family: 'Gilroy Regular',sans-serif;
   overflow-x: hidden;
   max-width: 100vw;
+  position: relative;
 
   &.overflow {
     overflow: hidden;

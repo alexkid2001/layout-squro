@@ -24,46 +24,31 @@
 
   
   @media (max-width: 991px) {
-    overflow: hidden;
-    justify-content: flex-start;
+    height: auto;
+
+    
 
     &__list {
-      overflow: auto;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     &__item {
-  
-      &:nth-child(n+2) {
-        margin-left: 79px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin-left: 20px;
+      margin-right: 20px;
+
+      &:first-child {
+        width: auto;
       }
     }
   }
 
+  @media (max-width: 767px) {
 
-  @media (min-width: 992px) {
-    
-  //   &__list {
-  //     justify-content: flex-start;
-  //     padding-top: 2px;
-  //   }
-
-  //   &__item {
-      
-  //     &:nth-child(2) {
-  //       margin-left: 128px;
-  //     }
-
-  //     &:nth-child(3) {
-  //       margin-left: 79px;
-  //     }
-
-  //     &:nth-child(4) {
-  //       margin-left: 79px; 
-  //     }
-
-  //     &:last-child {
-  //       margin-left: auto;
-  //     }
-  //   }
+    &__list {
+      justify-content: center;
+    }
   }
 }

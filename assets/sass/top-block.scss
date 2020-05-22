@@ -2,4 +2,39 @@
   background-color: $dark;
   height: 600px;
   overflow: hidden;
+  padding-top: 100px;
+  // background-image: url(../i/top.png);
+  // background-position: calc(50% + 200px) bottom;
+  // background-repeat: no-repeat;
+  position: relative;
+
+  &__image {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-55px);
+    z-index: 2;
+  }
+
+  .slider {
+    z-index: 1;
+  }
+
+  @media (max-width: 1199px) {
+    padding-top: 77px;
+
+    &__image {
+      height: 600px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .slider {
+      display: none;
+    }
+
+    &__image {
+      transform: translateX(-55%);
+    }
+  }
 }
